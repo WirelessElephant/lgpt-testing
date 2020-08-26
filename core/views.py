@@ -1,4 +1,4 @@
-from os import envrion
+from os import environ
 
 from django.shortcuts import render
 from django.http import HttpResponse
