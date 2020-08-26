@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lgpt-testing
+spec:
+  selector:
+    matchLabels:
+      app: lgpt-testing
+  template:
+    metadata:
+      labels:
+        app: lgpt-testing
+    spec:
+      containers:
+      - name: lgpt-testing
+        image: kamolinari/lgpt-testing:latest
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "1000m"
+        ports:
+        - containerPort: 3031
